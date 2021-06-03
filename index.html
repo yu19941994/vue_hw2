@@ -37,15 +37,58 @@
             <button class="btn btn-lg btn-primary w-100 mt-3" type="submit" id="loginBtn">
               登入
             </button>
-            <button class="btn btn-lg btn-secondary w-100 mt-3" type="submit" id="checkBtn">
+            <!-- <button class="btn btn-lg btn-secondary w-100 mt-3" type="submit" id="checkBtn">
               確認是否登入
-            </button>
+            </button> -->
           </form>
         </div>
       </div>
       <p class="mt-5 mb-3 text-muted">
         &copy; 2021~∞ - 六角學院
       </p>
+    </div>
+
+    <div class="container">
+      <div id="app" class="container">
+        <table class="table mt-4">
+          <thead>
+            <tr>
+              <th>產品名稱</th>
+              <th width="120">
+                原價
+              </th>
+              <th width="120">
+                售價
+              </th>
+              <th width="150">
+                是否啟用
+              </th>
+              <th width="120">
+                刪除
+              </th>
+            </tr>
+          </thead>
+          <tbody id="productList">
+            <!-- <tr>
+                <td>範例標題</td>
+                <td width="120">
+                  範例原價
+                </td>
+                <td width="120">
+                  範例價格
+                </td>
+                <td width="100">
+                  <span class="">範例啟用狀態</span>
+                </td>
+                <td width="120">
+                  <button type="button" class="btn btn-sm btn-outline-danger move deleteBtn" data-action="remove"
+                    data-id=""> 刪除 </button>
+                </td>
+              </tr> -->
+          </tbody>
+        </table>
+        <p>目前有 <span id="productCount">0</span> 項產品</p>
+      </div>
     </div>
   </div>
 
