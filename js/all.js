@@ -22,7 +22,7 @@ function login (e) {
   axios.post(`${url}/admin/signin`, data)
     .then(res => {
       console.log(res)
-      if(res.data.success === true) {
+      if(res.data.success) {
         const {token, expired} = res.data
         console.log(token, expired)
         document.cookie = `myToken = ${token}; expires = ${new Date(expired)}`
@@ -52,7 +52,7 @@ const app = {
     axios.get(`${url}/api/${path}/admin/products`)
       .then(res => {
         console.log(res)
-        if(res.data.success === true) {
+        if(res.data.success) {
           this.data.product = res.data.products
           console.log(this.data.product) 
           this.renderProduct(this.data.product)
@@ -93,7 +93,7 @@ const app = {
       axios.delete(`${url}/api/${path}/admin/product/${productId}`)
         .then(res => {
           console.log(res)
-          if(res.data.success === true) {
+          if(res.data.success) {
             app.getProduct()
           }
         })
